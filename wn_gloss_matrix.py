@@ -14,8 +14,16 @@ def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename =
     # Creating corpus
     print("Creating corpus...")
     wn_corpus = ""
+    #for ss in wn.all_synsets():
+    #    wn_corpus += ss.definition() + ". " + ". ".join(ss.examples()) + ". "
+    covered = []
     for ss in wn.all_synsets():
-        wn_corpus += ss.definition() + ". " + ". ".join(ss.examples()) + ". "
+        w = ss.name().split(".")[0]
+        if w not in covered:
+            syns = wn.synsets(w)
+            for s in syns:
+                wn_corpus += s.definition() + ". " + ". ".join(s.examples()) + ". "
+                
     
     # Corpus to array
     wn_words = re.sub("[^\w]", " ",  wn_corpus).split()
