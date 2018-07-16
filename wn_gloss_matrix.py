@@ -23,8 +23,7 @@ def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename =
             syns = wn.synsets(w)
             for s in syns:
                 wn_corpus += s.definition() + ". " + ". ".join(s.examples()) + ". "
-                
-    
+            covered.append(w)
     # Corpus to array
     wn_words = re.sub("[^\w]", " ",  wn_corpus).split()
     
