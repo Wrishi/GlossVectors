@@ -44,25 +44,31 @@ test_words = [
     ('noon', 'string')
 ]
 
-g_fn = 'gloss_matrix.v01.npz'
-w_fn = 'wn_words.v01.npz'
+g_fn = 'gloss_matrix.clean_text'
+w_fn = 'wn_words.clean_text'
 
 # Takes long time. To be used only when it is needed to create gloss matrix
-wgm.create_gloss_matrix(neighbors = 5, gloss_filename = g_fn, word_filename = w_fn)
+# wgm.create(neighbors = 5, gloss_filename = g_fn, word_filename = w_fn)
+wgm.create(corpus_file = "wn_corpus.txt", neighbors = 5, gloss_filename = g_fn, word_filename = w_fn)
 
-wn_unique_words = np.load(g_fn)
-wn_gloss_matrix = np.load(w_fn)
+wn_gloss_matrix = np.load(g_fn+".npy")
+wn_unique_words = np.load(w_fn+".npy")
+
 
 print("Angle between reference word vectors (paper): ")
 for w1, w2 in paper_words:
     try:
+        print('=====================================')
         i1 = np.where(wn_unique_words==w1)
         i2 = np.where(wn_unique_words==w2)
         v1 = wn_gloss_matrix[i1][0]
         v2 = wn_gloss_matrix[i2][0]
         
-        similarity = math.acos(np.dot(v1, v2)/(np.linalg.norm(v1)* np.linalg.norm(v2))) * 180/math.pi
-        print(w1, ", ", w2, ": ", similarity)
+        d = np.dot(v1, v2)/(np.linalg.norm(v1)* np.linalg.norm(v2))
+        print(w1, ", ", w2)
+        print(math.acos(d) * 180/math.pi)
+        print("cosine distance: ", d)
+        print("euclidean distance: ", np.linalg.norm(v1-v2))
     except IndexError:
         print("Word not found.")
         continue
@@ -71,13 +77,17 @@ for w1, w2 in paper_words:
 print("\nAngle between test word vectors: ")
 for w1, w2 in test_words:
     try:
+        print('=====================================')
         i1 = np.where(wn_unique_words==w1)
         i2 = np.where(wn_unique_words==w2)
         v1 = wn_gloss_matrix[i1][0]
         v2 = wn_gloss_matrix[i2][0]
         
-        similarity = math.acos(np.dot(v1, v2)/(np.linalg.norm(v1)* np.linalg.norm(v2))) * 180/math.pi
-        print(w1, ", ", w2, ": ", similarity)
+        d = np.dot(v1, v2)/(np.linalg.norm(v1)* np.linalg.norm(v2))
+        print(w1, ", ", w2)
+        print(math.acos(d) * 180/math.pi)
+        print("cosine distance: ", d)
+        print("euclidean distance: ", np.linalg.norm(v1-v2))
     except IndexError:
         print("Word not found.")
         continue

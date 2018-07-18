@@ -4,11 +4,13 @@ from scipy.sparse import bsr_matrix
 import nltk.corpus
 from nltk.tokenize import RegexpTokenizer
 import re
-#import matplotlib.pyplot as plt
 from nltk.corpus import wordnet as wn
+from nltk.tokenize import word_tokenize
+import string
+from nltk.corpus import stopwords
+import os
 
-def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename = 'gloss_matrix.npz', word_filename = 'wn_words.npz'):
-    num_pos = neighbors
+def create_corpus():
     wn_corpus = ""
     
     # Creating corpus
@@ -24,6 +26,25 @@ def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename =
             for s in syns:
                 wn_corpus += s.definition() + ". " + ". ".join(s.examples()) + ". "
             covered.append(w)
+            
+    return wn_corpus
+
+
+def save_corpus(wn_corpus, corpus_file = "wn_corpus.txt"):
+    # Saving corpus
+    print("Saving corpus...")
+    text_file = open(corpus_file, "w")
+    text_file.write(wn_corpus)
+    text_file.close()
+    print("Corpus saved in file: ", corpus_file)
+    
+
+def load_corpus(corpus_file):
+    print("Loading corpus...")
+    return open(corpus_file, "r").read()
+
+"""
+def get_clean_word_list_old(wn_corpus):
     # Corpus to array
     wn_words = re.sub("[^\w]", " ",  wn_corpus).split()
     
@@ -31,6 +52,34 @@ def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename =
     print("Removing Stopwords...")
     wn_filtered_words = [word for word in wn_words if word not in nltk.corpus.stopwords.words('english')]
     
+    return wn_filtered_words
+"""
+
+def get_clean_word_list(wn_corpus):
+    print("Cleaning corpus...")
+    tokens = word_tokenize(wn_corpus)
+    # convert to lower case
+    tokens = [w.lower() for w in tokens]
+
+    # keep only nouns <========= A bad idea probably
+    # pos_tagged = nltk.pos_tag(tokens)
+    # nouns = [word for (word, pos) in pos_tagged if pos in ['NN','NNP','NNS','NNPS']]
+
+    # remove punctuation from each word
+    table = str.maketrans('', '', string.punctuation)
+    stripped = [w.translate(table) for w in tokens]
+    
+    # remove remaining tokens that are not alphabetic
+    words = [word for word in stripped if word.isalpha()]
+    
+    # filter out stop words
+    stop_words = set(stopwords.words('english'))
+    wn_filtered_words = [w for w in words if not w in stop_words]
+    
+    return wn_filtered_words
+
+
+def get_filtered_word_list(wn_filtered_words, min_freq = 4):
     # Removing low frequency words
     ### Creating dictionary for frequency of words
     print("Removing low frequency words...")
@@ -55,6 +104,12 @@ def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename =
             
     wn_unique_words = list(wn_dict.keys())
     
+    return wn_unique_words, wn_dict
+
+
+def create_gloss_matrix(wn_filtered_words, wn_unique_words, neighbors):
+    num_pos = neighbors
+    
     # Creating gloss matrix for all words in filtered corpus
     print("Creating gloss matrix. This will take some time...")
     wn_gloss_matrix = bsr_matrix((len(wn_unique_words), len(wn_unique_words)), dtype=np.int8).toarray()
@@ -73,9 +128,42 @@ def create_gloss_matrix(neighbors = 4, min_freq = 4, path = "", gloss_filename =
         
         r += 1
         
+    return wn_gloss_matrix
+
+
+def save_gloss_matrix(wn_gloss_matrix, gloss_filename, path = ""):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
     np.save(path + gloss_filename, wn_gloss_matrix)
     print("Gloss Matrix was saved in file: ", path + gloss_filename)
-        
+
+
+def save_unique_words(wn_unique_words, word_filename, path = ""):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
     np.save(path + word_filename, wn_unique_words)
     print("Word list was saved in file: ", path + word_filename)
     print("Position of words correspond to Vectors in matrix.")
+
+
+def create(corpus_file = None,
+           neighbors = 4, 
+           min_freq = 4,
+           output_path = "output/", 
+           gloss_filename = "gloss_matrix", 
+           word_filename = "wn_words"):
+    if corpus_file == None:
+        wn_corpus = create_corpus()
+        save_corpus(wn_corpus)
+    else:
+        wn_corpus = load_corpus(corpus_file)
+        
+    wn_filtered_words = get_clean_word_list(wn_corpus)
+    wn_unique_words, wn_dict = get_filtered_word_list(wn_filtered_words, min_freq)
+    wn_gloss_matrix = create_gloss_matrix(wn_filtered_words, wn_unique_words, neighbors)
+    
+    save_gloss_matrix(wn_gloss_matrix, gloss_filename, output_path)
+    save_unique_words(wn_unique_words, word_filename, output_path)
+
+        
+    

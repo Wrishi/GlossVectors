@@ -1,0 +1,244 @@
+CLEANED TEXT
+
+Angle between reference word vectors (paper): 
+=====================================
+serve ,  tennis
+90.54383283913947
+cosine distance:  -0.0094915311036593
+euclidean distance:  114.73447607410773
+=====================================
+serve ,  food
+90.10984755670714
+cosine distance:  -0.0019172003653135752
+euclidean distance:  399.3795187537789
+=====================================
+fork ,  tennis
+90.1236232464863
+cosine distance:  -0.002157631009091123
+euclidean distance:  99.2874614440313
+=====================================
+fork ,  food
+90.3080357924926
+cosine distance:  -0.005376212893939678
+euclidean distance:  408.8104695332545
+=====================================
+player ,  tennis
+90.43638291385335
+cosine distance:  -0.007616245011439503
+euclidean distance:  147.78700890132393
+=====================================
+player ,  food
+89.91230846484359
+cosine distance:  0.0015305054170859443
+euclidean distance:  415.76555893916947
+
+Angle between test word vectors: 
+=====================================
+car ,  automobile
+90.25964819817915
+cosine distance:  -0.0045317004442199564
+euclidean distance:  286.8239878392322
+=====================================
+gem ,  jewel
+86.12005536491091
+cosine distance:  0.06766606493215212
+euclidean distance:  21.79449471770337
+=====================================
+journey ,  voyage
+95.11207511867146
+cosine distance:  -0.08910421112136306
+euclidean distance:  50.428166732491874
+=====================================
+boy ,  lad
+85.79577145852247
+cosine distance:  0.0733118007025758
+euclidean distance:  87.04596486914255
+=====================================
+coast ,  shore
+90.36285915248455
+cosine distance:  -0.006333044597371542
+euclidean distance:  286.2935556382644
+=====================================
+Word not found.
+=====================================
+magician ,  wizard
+86.59983451332502
+cosine distance:  0.05930925677917817
+euclidean distance:  15.968719422671311
+=====================================
+midday ,  noon
+85.28150596362464
+cosine distance:  0.08226020079225392
+euclidean distance:  50.3189825016365
+=====================================
+furnace ,  stove
+89.8100555556857
+cosine distance:  0.0033151498767555344
+euclidean distance:  36.09709129556009
+=====================================
+food ,  fruit
+89.96926097486573
+cosine distance:  0.0005364971717098121
+euclidean distance:  491.1659597325531
+=====================================
+bird ,  cock
+89.08842044045652
+cosine distance:  0.015909393496873783
+euclidean distance:  151.7234326002414
+=====================================
+bird ,  crane
+91.56318552339465
+cosine distance:  -0.02727934968915706
+euclidean distance:  153.61966020011891
+=====================================
+tool ,  implement
+90.89989802527668
+cosine distance:  -0.015705537736688806
+euclidean distance:  99.10600385445879
+=====================================
+brother ,  monk
+91.16074781343377
+cosine distance:  -0.02025748537758821
+euclidean distance:  82.79492738084863
+=====================================
+lad ,  brother
+88.60972591525294
+cosine distance:  0.024262479229414362
+euclidean distance:  82.41359111214607
+=====================================
+crane ,  implement
+94.52275808389199
+cosine distance:  -0.07885506857770654
+euclidean distance:  67.09694478886502
+=====================================
+journey ,  car
+90.37204178037665
+cosine distance:  -0.00649330839206993
+euclidean distance:  291.4601173402632
+=====================================
+monk ,  oracle
+89.08469185746371
+cosine distance:  0.015974461276617433
+euclidean distance:  25.612496949731394
+=====================================
+cemetery ,  woodland
+89.14663131770064
+cosine distance:  0.014893542576223806
+euclidean distance:  44.034077712607996
+=====================================
+food ,  rooster
+89.31306350751875
+cosine distance:  0.011989016317421983
+euclidean distance:  408.94498407487526
+=====================================
+coast ,  hill
+89.68434906340418
+cosine distance:  0.005509120262880847
+euclidean distance:  291.0755915565577
+=====================================
+Word not found.
+=====================================
+shore ,  woodland
+92.26053409322493
+cosine distance:  -0.039443527959738656
+euclidean distance:  71.73562573784382
+=====================================
+monk ,  slave
+86.10179778057751
+cosine distance:  0.06798398610228965
+euclidean distance:  36.40054944640259
+=====================================
+coast ,  forest
+90.09350677977008
+cosine distance:  -0.0016320004554723501
+euclidean distance:  295.2253376659937
+=====================================
+lad ,  wizard
+90.0
+cosine distance:  0.0
+euclidean distance:  12.68857754044952
+=====================================
+chord ,  smile
+87.78012993181939
+cosine distance:  0.03873434926529318
+euclidean distance:  76.04603868710059
+=====================================
+glass ,  magician
+91.75901118830208
+cosine distance:  -0.03069571438241486
+euclidean distance:  140.19272449025306
+=====================================
+rooster ,  voyage
+89.69179629163517
+cosine distance:  0.005379143536399191
+euclidean distance:  33.31666249791537
+=====================================
+noon ,  string
+90.4214700595834
+cosine distance:  -0.007355973897635336
+euclidean distance:  168.5496959356498
+
+
+
+
+CORPUS OF NEW FILTERED WORDS
+
+89.90581415294034
+cosine distance:  0.0016438523996199711
+euclidean distance:  351.08973211986705
+
+88.95980429823524
+cosine distance:  0.018153842576868664
+euclidean distance:  102.60604270704528
+
+89.6398434859342
+cosine distance:  0.006285875597388197
+euclidean distance:  357.07562224268406
+
+91.33939155262745
+cosine distance:  -0.02337466348835465
+euclidean distance:  89.87213138676528
+
+90.11614533968083
+cosine distance:  -0.0020271171999685714
+euclidean distance:  369.22215534824016
+
+89.40759066283508
+cosine distance:  0.0103393092299302
+euclidean distance:  132.7365812427004
+
+
+
+CORPUS OF JUST NOUNS
+
+serve, food
+89.31749567969865
+cosine distance:  0.011911665843713967
+euclidean distance:  338.75507376274084
+
+serve, tennis
+86.73041810476701
+cosine distance:  0.057034003114895114
+euclidean distance:  81.89627586160435
+
+spoon, food
+89.49399202688802
+cosine distance:  0.008831390369675328
+euclidean distance:  339.29927792437167
+
+spoon, tennis
+91.83992319687586
+cosine distance:  -0.0321071988055215
+euclidean distance:  89.83317872590283
+
+player, food
+90.0422837753391
+cosine distance:  -0.0007379910328520903
+euclidean distance:  352.41452864489
+
+player, tennis
+90.09183629296203
+cosine distance:  -0.0016028449986977978
+euclidean distance:  157.61345120261785
+
+
