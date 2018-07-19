@@ -1,6 +1,7 @@
 import numpy as np
 import wn_gloss_matrix as wgm
 import math
+from scipy import spatial
 
 paper_words = [
     ('serve', 'tennis'),
@@ -44,8 +45,8 @@ test_words = [
     ('noon', 'string')
 ]
 
-g_fn = 'gloss_matrix.clean_text'
-w_fn = 'wn_words.clean_text'
+g_fn = 'gloss_matrix.clean_text.v02'
+w_fn = 'wn_words.clean_text.v02'
 
 # Takes long time. To be used only when it is needed to create gloss matrix
 # wgm.create(neighbors = 5, gloss_filename = g_fn, word_filename = w_fn)
@@ -64,17 +65,15 @@ for w1, w2 in paper_words:
         v1 = wn_gloss_matrix[i1][0]
         v2 = wn_gloss_matrix[i2][0]
         
-        d = np.dot(v1, v2)/(np.linalg.norm(v1)* np.linalg.norm(v2))
-        print(w1, ", ", w2)
-        print(math.acos(d) * 180/math.pi)
-        print("cosine distance: ", d)
-        print("euclidean distance: ", np.linalg.norm(v1-v2))
+        print(w1, ",", w2)
+        print("cosine similarity: ", 1 - spatial.distance.cosine(v1,v2))
+        #print("euclidean distance: ", np.linalg.norm(v1-v2))
     except IndexError:
         print("Word not found.")
         continue
 
 
-print("\nAngle between test word vectors: ")
+print("\n\nAngle between test word vectors: ")
 for w1, w2 in test_words:
     try:
         print('=====================================')
@@ -83,11 +82,9 @@ for w1, w2 in test_words:
         v1 = wn_gloss_matrix[i1][0]
         v2 = wn_gloss_matrix[i2][0]
         
-        d = np.dot(v1, v2)/(np.linalg.norm(v1)* np.linalg.norm(v2))
-        print(w1, ", ", w2)
-        print(math.acos(d) * 180/math.pi)
-        print("cosine distance: ", d)
-        print("euclidean distance: ", np.linalg.norm(v1-v2))
+        print(w1, ",", w2)
+        print("cosine similarity: ", 1 - spatial.distance.cosine(v1,v2))
+        #print("euclidean distance: ", np.linalg.norm(v1-v2))
     except IndexError:
         print("Word not found.")
         continue

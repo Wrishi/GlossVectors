@@ -10,6 +10,7 @@ import string
 from nltk.corpus import stopwords
 import os
 
+
 def create_corpus():
     wn_corpus = ""
     
@@ -71,7 +72,8 @@ def get_clean_word_list(wn_corpus):
     
     # remove remaining tokens that are not alphabetic
     words = [word for word in stripped if word.isalpha()]
-    
+    # remove words with 2 alphabets or less
+    words = [word for word in words if len(word) > 2]
     # filter out stop words
     stop_words = set(stopwords.words('english'))
     wn_filtered_words = [w for w in words if not w in stop_words]
