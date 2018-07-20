@@ -73,7 +73,7 @@ def get_clean_word_list(wn_corpus):
     # remove remaining tokens that are not alphabetic
     words = [word for word in stripped if word.isalpha()]
     # remove words with 2 alphabets or less
-    words = [word for word in words if len(word) > 2]
+    words = [word for word in words if len(word) > 1]
     # filter out stop words
     stop_words = set(stopwords.words('english'))
     wn_filtered_words = [w for w in words if not w in stop_words]
@@ -134,15 +134,15 @@ def create_gloss_matrix(wn_filtered_words, wn_unique_words, neighbors):
 
 
 def save_gloss_matrix(wn_gloss_matrix, gloss_filename, path = ""):
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    if not os.path.exists(path):
+        os.makedirs(path)
     np.save(path + gloss_filename, wn_gloss_matrix)
     print("Gloss Matrix was saved in file: ", path + gloss_filename)
 
 
 def save_unique_words(wn_unique_words, word_filename, path = ""):
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    if not os.path.exists(path):
+        os.makedirs(path)
     np.save(path + word_filename, wn_unique_words)
     print("Word list was saved in file: ", path + word_filename)
     print("Position of words correspond to Vectors in matrix.")

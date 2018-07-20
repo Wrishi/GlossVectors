@@ -95,6 +95,232 @@ cosine similarity:  0.06798398610228962
 coast , forest
 cosine similarity:  0.4295416981460918
 =====================================
+lad , wizardAngle between reference word vectors (paper): 
+=====================================
+serve , tennis
+cosine similarity:  0.2613537522080299
+=====================================
+serve , food
+cosine similarity:  0.3599187608599339
+=====================================
+fork , tennis
+cosine similarity:  0.12618056701450253
+=====================================
+fork , food
+cosine similarity:  0.18636123023714113
+=====================================
+player , tennis
+cosine similarity:  0.3895321454467935
+=====================================
+player , food
+cosine similarity:  0.2593060000161872
+
+
+Angle between test word vectors: 
+=====================================
+car , automobile
+cosine similarity:  0.49245198844392524
+=====================================
+gem , jewel
+cosine similarity:  0.0676660649321521
+=====================================
+journey , voyage
+cosine similarity:  0.1438067175133273
+=====================================
+boy , lad
+cosine similarity:  0.08575742714873646
+=====================================
+coast , shore
+cosine similarity:  0.4068887520680531
+=====================================
+Word not found.
+=====================================
+magician , wizard
+cosine similarity:  0.0593092567791782
+=====================================
+midday , noon
+cosine similarity:  0.20365978762525572
+=====================================
+furnace , stove
+cosine similarity:  0.2862079393598944
+=====================================
+food , fruit
+cosine similarity:  0.45999035428788293
+=====================================
+bird , cock
+cosine similarity:  0.2636636338764018
+=====================================
+bird , crane
+cosine similarity:  0.22260308889432423
+=====================================
+tool , implement
+cosine similarity:  0.45672309831962954
+=====================================
+brother , monk
+cosine similarity:  0.1419546881975352
+=====================================
+lad , brother
+cosine similarity:  0.03013986542366398
+=====================================
+crane , implement
+cosine similarity:  0.1337686256896362
+=====================================
+journey , car
+cosine similarity:  0.4229941257310177
+=====================================
+monk , oracle
+cosine similarity:  0.01597446127661739
+=====================================
+cemetery , woodland
+cosine similarity:  0.018223071777134114
+=====================================
+food , rooster
+cosine similarity:  0.1018442406135307
+=====================================
+coast , hill
+cosine similarity:  0.38407620927606567
+=====================================
+Word not found.
+=====================================
+shore , woodland
+cosine similarity:  0.10146713231637894
+=====================================
+monk , slave
+cosine similarity:  0.0663089972543931
+=====================================
+coast , forest
+cosine similarity:  0.4293791450675305
+=====================================
+lad , wizard
+cosine similarity:  0.0
+=====================================
+chord , smile
+cosine similarity:  0.04433734396724753
+=====================================
+glass , magician
+cosine similarity:  0.15215020653827793
+=====================================
+rooster , voyage
+cosine similarity:  0.0053791435363992335
+=====================================
+noon , string
+cosine similarity:  0.08869263151449291
+
+cosine similarity:  0.0
+=====================================
+chord , smile
+cosine similarity:  0.04433734396724753
+=====================================
+glass , magician
+cosine similarity:  0.1515011578901233
+=====================================
+rooster , voyage
+cosine similarity:  0.0053791435363992335
+=====================================
+noon , string
+cosine similarity:  0.08976674260533668
+
+
+
+
+V.01 (1 alphabet words removed)
+
+Angle between reference word vectors (paper): 
+=====================================
+serve , tennis
+cosine similarity:  0.26191334341861916
+=====================================
+serve , food
+cosine similarity:  0.3816401601350069
+=====================================
+fork , tennis
+cosine similarity:  0.12621494395752275
+=====================================
+fork , food
+cosine similarity:  0.1842341431119433
+=====================================
+player , tennis
+cosine similarity:  0.38220959496873175
+=====================================
+player , food
+cosine similarity:  0.2633561556007069
+
+
+Angle between test word vectors: 
+=====================================
+car , automobile
+cosine similarity:  0.4947724420473001
+=====================================
+gem , jewel
+cosine similarity:  0.0676660649321521
+=====================================
+journey , voyage
+cosine similarity:  0.14280431148067485
+=====================================
+boy , lad
+cosine similarity:  0.08574200731095138
+=====================================
+coast , shore
+cosine similarity:  0.4066229089393316
+=====================================
+Word not found.
+=====================================
+magician , wizard
+cosine similarity:  0.0593092567791782
+=====================================
+midday , noon
+cosine similarity:  0.20072927818682862
+=====================================
+furnace , stove
+cosine similarity:  0.2862079393598945
+=====================================
+food , fruit
+cosine similarity:  0.45660834782210424
+=====================================
+bird , cock
+cosine similarity:  0.2639795542920651
+=====================================
+bird , crane
+cosine similarity:  0.22364366428493276
+=====================================
+tool , implement
+cosine similarity:  0.4434190285019892
+=====================================
+brother , monk
+cosine similarity:  0.14313380072294413
+=====================================
+lad , brother
+cosine similarity:  0.030810356198244238
+=====================================
+crane , implement
+cosine similarity:  0.1337686256896362
+=====================================
+journey , car
+cosine similarity:  0.43111883921412186
+=====================================
+monk , oracle
+cosine similarity:  0.01597446127661739
+=====================================
+cemetery , woodland
+cosine similarity:  0.018223071777134114
+=====================================
+food , rooster
+cosine similarity:  0.10154142221052997
+=====================================
+coast , hill
+cosine similarity:  0.3842467674865967
+=====================================
+Word not found.
+=====================================
+shore , woodland
+cosine similarity:  0.10142459736069875
+=====================================
+monk , slave
+cosine similarity:  0.06798398610228962
+=====================================
+coast , forest
+cosine similarity:  0.42954169814609167
+=====================================
 lad , wizard
 cosine similarity:  0.0
 =====================================
@@ -109,3 +335,119 @@ cosine similarity:  0.0053791435363992335
 =====================================
 noon , string
 cosine similarity:  0.08976674260533668
+
+
+
+
+V.02 (2 alphabet words removed)
+
+Angle between reference word vectors (paper): 
+=====================================
+serve , tennis
+cosine similarity:  0.2613537522080299
+=====================================
+serve , food
+cosine similarity:  0.3599187608599339
+=====================================
+fork , tennis
+cosine similarity:  0.12618056701450253
+=====================================
+fork , food
+cosine similarity:  0.18636123023714113
+=====================================
+player , tennis
+cosine similarity:  0.3895321454467935
+=====================================
+player , food
+cosine similarity:  0.2593060000161872
+
+
+Angle between test word vectors: 
+=====================================
+car , automobile
+cosine similarity:  0.49245198844392524
+=====================================
+gem , jewel
+cosine similarity:  0.0676660649321521
+=====================================
+journey , voyage
+cosine similarity:  0.1438067175133273
+=====================================
+boy , lad
+cosine similarity:  0.08575742714873646
+=====================================
+coast , shore
+cosine similarity:  0.4068887520680531
+=====================================
+Word not found.
+=====================================
+magician , wizard
+cosine similarity:  0.0593092567791782
+=====================================
+midday , noon
+cosine similarity:  0.20365978762525572
+=====================================
+furnace , stove
+cosine similarity:  0.2862079393598944
+=====================================
+food , fruit
+cosine similarity:  0.45999035428788293
+=====================================
+bird , cock
+cosine similarity:  0.2636636338764018
+=====================================
+bird , crane
+cosine similarity:  0.22260308889432423
+=====================================
+tool , implement
+cosine similarity:  0.45672309831962954
+=====================================
+brother , monk
+cosine similarity:  0.1419546881975352
+=====================================
+lad , brother
+cosine similarity:  0.03013986542366398
+=====================================
+crane , implement
+cosine similarity:  0.1337686256896362
+=====================================
+journey , car
+cosine similarity:  0.4229941257310177
+=====================================
+monk , oracle
+cosine similarity:  0.01597446127661739
+=====================================
+cemetery , woodland
+cosine similarity:  0.018223071777134114
+=====================================
+food , rooster
+cosine similarity:  0.1018442406135307
+=====================================
+coast , hill
+cosine similarity:  0.38407620927606567
+=====================================
+Word not found.
+=====================================
+shore , woodland
+cosine similarity:  0.10146713231637894
+=====================================
+monk , slave
+cosine similarity:  0.0663089972543931
+=====================================
+coast , forest
+cosine similarity:  0.4293791450675305
+=====================================
+lad , wizard
+cosine similarity:  0.0
+=====================================
+chord , smile
+cosine similarity:  0.04433734396724753
+=====================================
+glass , magician
+cosine similarity:  0.15215020653827793
+=====================================
+rooster , voyage
+cosine similarity:  0.0053791435363992335
+=====================================
+noon , string
+cosine similarity:  0.08869263151449291

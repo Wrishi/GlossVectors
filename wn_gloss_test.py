@@ -45,15 +45,16 @@ test_words = [
     ('noon', 'string')
 ]
 
-g_fn = 'gloss_matrix.clean_text.v02'
-w_fn = 'wn_words.clean_text.v02'
+path = "output/"
+g_fn = 'gloss_matrix.clean_text.v01'
+w_fn = 'wn_words.clean_text.v01'
 
 # Takes long time. To be used only when it is needed to create gloss matrix
 # wgm.create(neighbors = 5, gloss_filename = g_fn, word_filename = w_fn)
 wgm.create(corpus_file = "wn_corpus.txt", neighbors = 5, gloss_filename = g_fn, word_filename = w_fn)
 
-wn_gloss_matrix = np.load(g_fn+".npy")
-wn_unique_words = np.load(w_fn+".npy")
+wn_gloss_matrix = np.load(path+g_fn+".npy")
+wn_unique_words = np.load(path+w_fn+".npy")
 
 
 print("Angle between reference word vectors (paper): ")
