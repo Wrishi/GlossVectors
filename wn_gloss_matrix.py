@@ -72,10 +72,16 @@ def get_clean_word_list(wn_corpus):
     
     # remove remaining tokens that are not alphabetic
     words = [word for word in stripped if word.isalpha()]
+    
     # remove words with 2 alphabets or less
     words = [word for word in words if len(word) > 1]
+    
     # filter out stop words
-    stop_words = set(stopwords.words('english'))
+    # discarding nltk stopword list to use the one used in paper
+    # stop_words = set(stopwords.words('english')) 
+    stop_words = open('stoplist.txt', 'r').read()
+    stop_words = stop_words.split('\n')
+    
     wn_filtered_words = [w for w in words if not w in stop_words]
     
     return wn_filtered_words
